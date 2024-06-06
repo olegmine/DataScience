@@ -20,3 +20,4 @@ for value in data['whoAmI']:
     one_hot_df = one_hot_df.append(pd.Series(one_hot_row, index=unique_values), ignore_index=True)
 
 print(one_hot_df.head())
+
