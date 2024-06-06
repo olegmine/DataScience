@@ -17,6 +17,6 @@ one_hot_df = pd.DataFrame(columns=unique_values)
 for value in data['whoAmI']:
     one_hot_row = [0] * len(unique_values)
     one_hot_row[value_to_int[value]] = 1
-    one_hot_df = one_hot_df.append(pd.Series(one_hot_row, index=unique_values), ignore_index=True)
+    one_hot_df = one_hot_df._append(pd.Series(one_hot_row, index=unique_values), ignore_index=True)
 
 print(one_hot_df.head())
